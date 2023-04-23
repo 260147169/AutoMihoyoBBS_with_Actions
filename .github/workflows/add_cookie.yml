@@ -19,8 +19,10 @@ jobs:
         python-version: "3.8"
 
     - name: Clone source
-      run: |
-        git clone https://github.com/Womsxd/AutoMihoyoBBS.git mihoyo
+      uses: actions/checkout@v3
+      with:
+        repository: Womsxd/MihoyoBBSTools
+        path: mihoyo
 
     - name: Install dependencies
       run: |
